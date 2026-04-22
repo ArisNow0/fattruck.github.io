@@ -1,0 +1,180 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "20:00": "Сокіл"
+      },
+      "geometry": {
+        "coordinates": [
+          35.050392251807466,
+          48.40759716399003
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "13:00": "Університет / Академія"
+      },
+      "geometry": {
+        "coordinates": [
+          35.05579433306232,
+          48.45966669162996
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "14:00": "Пасаж"
+      },
+      "geometry": {
+        "coordinates": [
+          35.047235558675084,
+          48.46423065364746
+        ],
+        "type": "Point"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "15:00": "проспект Дмитра Яворницького, 94–97"
+      },
+      "geometry": {
+        "coordinates": [
+          35.028644697736325,
+          48.47330368885909
+        ],
+        "type": "Point"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "18:00": "Дафі"
+      },
+      "geometry": {
+        "coordinates": [
+          35.02300681239032,
+          48.42573675036837
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "19:00": "Тополя-1"
+      },
+      "geometry": {
+        "coordinates": [
+          35.03414864235117,
+          48.40397522769379
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "16:00": "Парк"
+      },
+      "geometry": {
+        "coordinates": [
+          35.007807273410634,
+          48.47260318001662
+        ],
+        "type": "Point"
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "10:00": "Аквапарк Happy Day"
+      },
+      "geometry": {
+        "coordinates": [
+          35.06960461141114,
+          48.43656889754567
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "11:00": "Бартоломео"
+      },
+      "geometry": {
+        "coordinates": [
+          35.07531349179726,
+          48.448946030607175
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "12:00": "Апартаменти Port City"
+      },
+      "geometry": {
+        "coordinates": [
+          35.07750372454035,
+          48.46036438449755
+        ],
+        "type": "Point"
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "22:00": "Сільпо"
+      },
+      "geometry": {
+        "coordinates": [
+          35.07029675582302,
+          48.41431002545474
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "09:00": "вулиця Набережна Перемоги"
+      },
+      "geometry": {
+        "coordinates": [
+          35.065886959197826,
+          48.4225989035092
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "17:00": "VARUS"
+      },
+      "geometry": {
+        "coordinates": [
+          35.0026660833295,
+          48.45115201068887
+        ],
+        "type": "Point"
+      },
+      "id": 12
+    }
+  ]
+}

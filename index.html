@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>FatTruck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo">FAT<span>TRUCK</span></div>
+  <nav>
+    <a href="#menu">Меню</a>
+    <a href="#map">Де нас знайти</a>
+    <a href="#deals">Знижки</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop playsinline poster="image/back.jpg">
+  <source src="video/back.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h1>ВУЛИЧНА ЇЖА</h1>
+    <p>Свіжо. Швидко. Смачно.</p>
+  </div>
+</section>
+
+<!-- СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ -->
+<section id="deals" class="deals">
+  <video autoplay muted loop playsinline poster="image/burg.jpg">
+  <source src="video/burg.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+  <h2>Спеціальна Пропозиція</h2>
+  <div class="cards">
+    <div class="card"><img class="imgcard" src="image/menu/BurgerM.jpg" alt="Бургер"> <h1>-20% на бургери до 18:00</h1></div>
+    <div class="card"><img class="imgcard" src="image/menu/HotDogM.jpg" alt="Хот-дог"> <h1>3 за ціною 2</h1></div>
+    <div class="card"><img class="imgcard" src="image/menu/ComboM.jpg" alt="Комбо"><h1>Комбо! Бургер, картопля, напій!</h1></div>
+  </div>
+  </div>
+</section>
+
+
+<!-- ДЕ НАС ЗНАЙТИ -->
+<section id="map" class="map">
+  <video autoplay muted loop playsinline poster="image/burg.jpg">
+  <source src="video/drive.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+  <h2>Де наш фудтрак</h2>
+  <div class="map-con">
+    <div id="map-container"></div>
+  </div>
+  </div>
+  
+
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contact" class="section dark">
+  <h2>Контакты</h2>
+  <p>📞 +380 XX XXX XX XX</p>
+  <p>📍 Днепр</p>
+</section>
+
+<footer>
+  <p>© 2026 FoodTruck</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
