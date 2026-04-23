@@ -17,6 +17,20 @@
     {
       "type": "Feature",
       "properties": {
+        "21:00": "Лікарня"
+      },
+      "geometry": {
+        "coordinates": [
+          35.05155800052748,
+          48.41643742203922
+        ],
+        "type": "Point"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "13:00": "Університет / Академія"
       },
       "geometry": {

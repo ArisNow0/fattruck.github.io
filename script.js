@@ -337,58 +337,68 @@ function getCurrentHourUA() {
 async function initMap() {
   const map = L.map('map-container').setView([48.45, 35.05], 12);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap'
-  }).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
+  // --- ЛИНИЯ МАРШРУТА ---
   const routeLayer = L.geoJSON(routeData, {
     style: {
-      color: "#721b1b",
-      weight: 5,
-      opacity: 0.8
+      color: "#ff4d00", 
+      weight: 4,
+      opacity: 0.5
+    }
+  }).addTo(map);
+  // ----------------------
+
+  const dotIcon = L.divIcon({
+    html: '<div class="inner-dot"></div>',
+    className: 'map-dot-container',
+    iconSize: [14, 14],
+    iconAnchor: [7, 7]
+  });
+
+  const truckIcon = L.icon({
+    iconUrl: 'image/Logo/Logo.png',
+    iconSize: [60, 60],
+    iconAnchor: [30, 30]
+  });
+
+  const pointsData = await fetch('data.json').then(res => res.json());
+  const currentHour = getCurrentHourUA();
+
+  const pointsLayer = L.geoJSON(pointsData, {
+    pointToLayer: (feature, latlng) => {
+      const timeKey = Object.keys(feature.properties)[0];
+      const pointHour = parseInt(timeKey.split(":")[0], 10);
+      return L.marker(latlng, { 
+        icon: pointHour === currentHour ? truckIcon : dotIcon 
+      });
+    },
+    onEachFeature: (feature, layer) => {
+      const [time, name] = Object.entries(feature.properties)[0];
+      layer.bindPopup(`<b>${time}</b><br>${name}`);
     }
   }).addTo(map);
 
-  const currentHour = getCurrentHourUA();
-
-  const pointsData = await fetch('data.json').then(res => res.json());
-
-
-const truckIcon = L.icon({
-  iconUrl: 'image/Logo/Logo.png',   
-  iconSize: [60, 60],
-  iconAnchor: [20, 40],
-  popupAnchor: [0, -40]
-});
-
-const pointsLayer = L.geoJSON(pointsData, {
-  pointToLayer: (feature, latlng) => {
-    const [time] = Object.keys(feature.properties);
-    const pointHour = parseInt(time.split(":")[0], 10);
-    const isActive = pointHour === currentHour;
-
-    if (isActive) {
-      return L.marker(latlng, { icon: truckIcon });
-    }
-
-    return L.circleMarker(latlng, {
-      radius: 6,
-      fillColor: "#ff0000",
-      color: "#000",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.8
+  // Подвязка кликов таймлайна
+  const stopElements = document.querySelectorAll('.stop');
+  stopElements.forEach(stop => {
+    stop.addEventListener('click', () => {
+      const timeText = stop.querySelector('.stop-time').innerText.split('-')[0].trim();
+      const feature = pointsData.features.find(f => Object.keys(f.properties).includes(timeText));
+      
+      if (feature) {
+        const coords = [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
+        map.flyTo(coords, 17, { animate: true, duration: 1.5 });
+      }
     });
-  },
+  });
 
-  onEachFeature: (feature, layer) => {
-    const [time, name] = Object.entries(feature.properties)[0];
-    layer.bindPopup(`<b>${time}</b><br>${name}`);
-  }
-}).addTo(map);
-
+  // Автоматический зум на всю область маршрута
   const group = L.featureGroup([routeLayer, pointsLayer]);
-  map.fitBounds(group.getBounds());
+  map.fitBounds(group.getBounds(), { padding: [50, 50] });
+
+  // Логика Drag-scroll
+  initDragScroll(); 
 }
 
 initMap();

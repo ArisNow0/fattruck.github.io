@@ -1,29 +1,29 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Oswald';
-  background: #111;
-  color: white;
+    font-family: 'Oswald';
+    background: #111;
+    color: white;
 }
 
 header {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: rgb(0, 0, 0);
-  z-index: 100;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgb(0, 0, 0);
+    z-index: 100;
 }
 
 .logo {
-    
-  font-family: "Rubik Dirt", system-ui;
-  font-size: 7vb;
+
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 7vb;
     display: flex;
     align-items: center;
 }
@@ -34,186 +34,306 @@ header {
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
     justify-content: center;
 }
+
 nav a {
     text-align: center;
     font-size: 3.5vh;
     width: 17%;
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-font-family: "Rubik Dirt", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .hero {
     padding: 100px 0 0 0;
-  height: 100vh;
-  position: relative;
+    height: 100vh;
+    position: relative;
 }
 
 .hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 5vh;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-family: 'Oswald';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5vh;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Oswald';
 }
 
 .hero h1 {
-  font-size: 10vh;
-  font-family: "Rubik Dirt", system-ui;
+    font-size: 10vh;
+    font-family: "Rubik Dirt", system-ui;
 }
 
 .hero button {
     font-size: 2vh;
     font-family: 'Oswald';
-  padding: 10px 25px;
-  margin-top: 20px;
-  background: #ff4d00;
-  border: none;
-  color: white;
-  cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 20px;
+    background: #ff4d00;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 .map {
-  height: 600px;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  background-color: #222;
-  z-index: 0;
+    height: 680px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #222;
+    z-index: 0;
 }
 
 .map video {
-  position: absolute;
-  width: 700px;
-  top: -600px;
-  left: 0;
-  z-index: -2;
+    position: absolute;
+    width: 700px;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
 }
+
 .map::before {
-  position: absolute;
-  content: " ";
-  height: 700px;
-  width: 100px;
-  background: linear-gradient(
-  270deg, 
-  #222 50%,   
-  rgba(255, 0, 0, 0) 90%  
-);
-  left: 640px;
-  z-index: -1;
-}
-
-.deals {
-  font-size: 3vh;
-  height: 650px;
-  text-align: center;
-  overflow: hidden;
-  
-  position: relative;
-}
-.deals h2, .map h2 {
-  position: relative;
-  z-index: 1;
-  font-size: 5vh;
-  font-family: "Rubik Doodle Shadow", system-ui;
-}
-.deals video {
-  position: absolute;
-  width: 500px;
-  top: -200px;
-  right: 0;
-  z-index: -2;
-}
-.deals::before {
-  position: absolute;
-  content: " ";
-  height: 700px;
-  width: 100px;
-  background: linear-gradient(
-  90deg, 
-  #111 50%,   
-  rgba(255, 0, 0, 0) 90%  
-);
-  right: 440px;
-  z-index: -1;
-}
-
-.overlay {
-  padding: 25px 10px;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-.dark {
-  background: #1a1a1a;
-}
-
-.cards {
-  padding: 20px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  font-size: 1.5vh;
-  border: 2px solid #5c5c5c;
-  display: flex;
-  flex-direction: column;
-  background: #222;
-  padding: 20px;
-  width: 400px;
-  position: relative;
-  overflow: hidden;
-}
-.card h1 {
-  z-index: 1;
-}
-
-.imgcard {
-  border: 2px solid #505050;
-  height: 400px;
-  object-fit: cover;
-  margin-bottom: 15px;
-  z-index: 1;
-}
-.menu {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.item {
-  background: #222;
-  padding: 20px;
-  width: 200px;
+    position: absolute;
+    content: " ";
+    height: 700px;
+    width: 100px;
+    background: linear-gradient(270deg,
+            #222 50%,
+            rgba(255, 0, 0, 0) 90%);
+    left: 640px;
+    z-index: -1;
 }
 
 #map-container {
-  width: 900px;
-  border: 4px solid #505050;
-  height: 400px;
-  margin: 30px auto;
+    width: 100%;
+    border: 2px solid #5c5c5c;
+    height: 400px;
+}
+
+.deals {
+    font-size: 3vh;
+    height: 650px;
+    text-align: center;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.deals h2,
+.map h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 5vh;
+    font-family: "Rubik Doodle Shadow", system-ui;
+}
+
+.deals video {
+    position: absolute;
+    width: 500px;
+    top: -200px;
+    right: 0;
+    z-index: -2;
+}
+
+.deals::before {
+    position: absolute;
+    content: " ";
+    height: 700px;
+    width: 100px;
+    background: linear-gradient(90deg,
+            #111 50%,
+            rgba(255, 0, 0, 0) 90%);
+    right: 440px;
+    z-index: -1;
+}
+
+.overlay {
+    padding: 25px 10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dark {
+    background: #1a1a1a;
+}
+
+.cards {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    font-size: 1.5vh;
+    border: 2px solid #5c5c5c;
+    display: flex;
+    flex-direction: column;
+    background: #222;
+    padding: 20px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card h1 {
+    z-index: 1;
+}
+
+.imgcard {
+    border: 2px solid #505050;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.item {
+    background: #222;
+    padding: 20px;
+    width: 200px;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+.map-con {
+    height: 540px;
+    width: 900px;
+    background-color: #222;
+    margin: 20px auto;
+    border: 2px solid #5c5c5c;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#map-container {
+    width: 100%;
+    height: 400px;
+    border-bottom: 2px solid #5c5c5c;
+}
+
+.timeline {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #1a1a1a;
+    padding: 5px 0px 30px 0px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.timeline-wrapper {
+    position: relative;
+    width: 1820px;
+    height: 100px;
+    padding: 10px 40px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #5c5c5c;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.stops-container {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.stop-time {
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 1.2rem;
+    color: #ff4d00;
+    margin-bottom: 8px;
+}
+.map-dot-container {
+  border: none !important;
+  background: none !important;
+}
+
+.inner-dot {
+  width: 18px;
+  height: 18px;
+  background: #ff4d00;
+  border: 2px solid #fff;
+  transform: rotate(45deg); 
+  box-shadow: 0 0 8px rgba(255, 77, 0, 0.6);
+  pointer-events: none;
+}
+.stop-dot {
+    width: 14px;
+    height: 14px;
+    background: #ff4d00;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.stop:hover .stop-dot {
+    transform: rotate(45deg) scale(1.3);
+    background: #fff;
+}
+
+.stop-address {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #ccc;
+    text-transform: uppercase;
+    max-width: 90px;
+    line-height: 1.1;
+    font-family: 'Oswald';
+}
+
+.timeline::-webkit-scrollbar {
+    height: 6px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: #ff4d00;
+    border-radius: 0;
 }
